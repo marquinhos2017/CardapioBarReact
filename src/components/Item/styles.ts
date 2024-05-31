@@ -14,7 +14,7 @@ export const ContainerItem = styled.div`
 /* box-shadow */
  box-shadow: rgba(0,0,0,0.2) 0 0 24px;
 
- @media only screen and (min-width: 600px) and (max-width: 1280px) {
+ @media only screen and (min-width: 768px) and (max-width: 1280px) {
     box-shadow: rgba(0,0,0,0.1) 0 0 24px;
   
  }
@@ -49,7 +49,7 @@ align-items: center;
     margin-bottom:32px;
 
 
-    @media only screen and (min-width: 600px) and (max-width: 1280px) {
+    @media only screen and (min-width: 768px) and (max-width: 1280px) {
         margin-bottom:0px;
         height:200px;
       
