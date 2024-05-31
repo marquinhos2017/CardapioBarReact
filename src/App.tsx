@@ -67,7 +67,7 @@ const App: React.FC = () => {
     console.log("Total no carrinho antes de clicar: " + currentTotal);
     console.log("Valor Item clicado: " + newItem.price);
 
-    if (newTotal > 4.2) {
+    if (newTotal > 2.4) {
       alert('Total excede R$2,40!');
     } else {
       setCart(prevCart => {
