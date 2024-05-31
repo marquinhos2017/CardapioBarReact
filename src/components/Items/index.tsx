@@ -5,9 +5,7 @@ export const Items = () => {
     return (
         <>
             <ContainerItems>
-                <Item></Item>
-                <Item2></Item2>
-                <Item></Item>
+
             </ContainerItems>
 
         </>
