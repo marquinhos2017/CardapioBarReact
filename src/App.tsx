@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Menu from './components/Menu';
 import Cart from './components/Cart';
-import { ContainerItems, Logo } from './styles';
+import { Container, ContainerItems, Logo } from './styles';
 import PasteldeNata from "./assets/pastel_nata_80_ref155070 copy 27.png"
 import Sumo from "./assets/Frame 1.png"
 import Iorgut from "./assets/novo-logo_imagens-iogurtes-líquidos_aromas-morango.png"
@@ -23,8 +23,13 @@ const App: React.FC = () => {
     { id: 1, name: 'Pastel de Nata', price: 1.00, img: PasteldeNata },
     { id: 2, name: 'Sumo', price: 1.50, img: Sumo },
     { id: 3, name: 'Ovo Cozido', price: 2.00, img: ovocozido },
-    { id: 1, name: 'Iogurt', price: 1.00, img: Iorgut },
-    { id: 2, name: 'Agua 1.5L', price: 1, img: agua1lmeio },
+    { id: 4, name: 'Iogurt', price: 1.00, img: Iorgut },
+    { id: 5, name: 'Agua 1.5L', price: 1, img: agua1lmeio },
+    { id: 6, name: 'Pastel de Nata', price: 1.00, img: PasteldeNata },
+    { id: 7, name: 'Sumo', price: 1.50, img: Sumo },
+    { id: 8, name: 'Ovo Cozido', price: 2.00, img: ovocozido },
+    { id: 9, name: 'Iogurt', price: 1.00, img: Iorgut },
+    { id: 10, name: 'Agua 1.5L', price: 1, img: agua1lmeio },
 
   ];
 
@@ -49,13 +54,18 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Logo src={logo} alt="" />
-      <ContainerItems>
 
-        <Menu items={items} addToCart={addToCart} />
+      <Container>
+
+        <ContainerItems>
+          <Logo src={logo} alt="" />
+
+          <Menu items={items} addToCart={addToCart} />
+
+
+        </ContainerItems>
         <Cart cart={cart} />
-
-      </ContainerItems>
+      </Container>
     </>
   );
 }

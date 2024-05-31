@@ -46,17 +46,20 @@ export const Information = styled.div`
 
 
 export const ContainerItems = styled.div`
+max-width:840px;
+margin: 0 auto;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding:0px;
     grid-column-gap: 42px;
     grid-row-gap: 42px;
-    margin-right:24px;
+    margin-right:0px;
 
     @media only screen and (min-width: 768px) and (max-width: 1280px) {
         grid-row-gap: 24px;
         grid-column-gap: 4px;
       
      }
+     z-index: 1;
     
 `
