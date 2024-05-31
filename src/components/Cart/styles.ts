@@ -12,7 +12,7 @@ padding:24px;
 
 position: fixed;
     top: 0;
-    left: 840px;
+    left: 860px;
     width: 100%;
     height: 100vh; /* Ocupa toda a altura da viewport */
     overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
