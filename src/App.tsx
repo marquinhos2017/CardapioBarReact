@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import './App.css';
 import Menu from './components/Menu';
 import Cart from './components/Cart';
-import { ContainerItems } from './styles';
+import { ContainerItems, Logo } from './styles';
 import PasteldeNata from "./assets/pastel_nata_80_ref155070 copy 27.png"
 import Sumo from "./assets/Frame 1.png"
 import Iorgut from "./assets/novo-logo_imagens-iogurtes-líquidos_aromas-morango.png"
+import ovocozido from "../src/assets/ovocozido.avif"
+import agua1lmeio from "./assets/50cl-cópia.png"
+import logo from "./assets/unnamed.jpg"
 
 interface Item {
   id: number;
@@ -19,19 +22,10 @@ const App: React.FC = () => {
   const items: Item[] = [
     { id: 1, name: 'Pastel de Nata', price: 1.00, img: PasteldeNata },
     { id: 2, name: 'Sumo', price: 1.50, img: Sumo },
-    { id: 3, name: 'Pastel de Nata 2', price: 2.00, img: PasteldeNata },
+    { id: 3, name: 'Ovo Cozido', price: 2.00, img: ovocozido },
     { id: 1, name: 'Iogurt', price: 1.00, img: Iorgut },
-    { id: 2, name: 'Sumo', price: 1.50, img: Sumo },
-    { id: 3, name: 'Iorgurt', price: 2.00, img: Iorgut },
-    { id: 1, name: 'Iorgut', price: 1.00, img: Iorgut },
-    { id: 2, name: 'Sumo', price: 1.50, img: Sumo },
-    { id: 3, name: 'Pastel de Nata 2', price: 2.00, img: PasteldeNata },
-    { id: 1, name: 'Iorgut', price: 1.00, img: Iorgut },
-    { id: 2, name: 'Sumo', price: 1.50, img: Sumo },
-    { id: 3, name: 'Pastel de Nata 2', price: 2.00, img: PasteldeNata },
-    { id: 1, name: 'Iorgut', price: 1.00, img: Iorgut },
-    { id: 2, name: 'Sumo', price: 1.50, img: Sumo },
-    { id: 3, name: 'Pastel de Nata 2', price: 2.00, img: PasteldeNata },
+    { id: 2, name: 'Agua 1.5L', price: 1, img: agua1lmeio },
+
   ];
 
   const addToCart = (newItem: Item) => {
@@ -54,12 +48,15 @@ const App: React.FC = () => {
   };
 
   return (
-    <ContainerItems>
+    <>
+      <Logo src={logo} alt="" />
+      <ContainerItems>
 
-      <Menu items={items} addToCart={addToCart} />
-      <Cart cart={cart} />
+        <Menu items={items} addToCart={addToCart} />
+        <Cart cart={cart} />
 
-    </ContainerItems>
+      </ContainerItems>
+    </>
   );
 }
 

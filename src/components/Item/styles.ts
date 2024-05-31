@@ -30,16 +30,20 @@ align-items: center;
 
 
 width:100%;
-height:300px;   
+height:200px;   
+
 
 
 
     img{
         
         
-        width:200px;
+        width:150px;
+      
+        height: 200px;
+        object-fit: contain;
   
-        object-fit: cover;
+ 
 
         
         
@@ -57,7 +61,8 @@ height:300px;
 `
 
 export const Information = styled.div`
-
+height:24px;
+margin-top: 16px;
     display:flex;
     justify-content: space-between; /* Centraliza horizontalmente */
     align-items: center; 
@@ -65,6 +70,8 @@ export const Information = styled.div`
     
 
     h3{
+        text-align:left;
+        width:100px;
         font-size:16px;
         margin:0;
         color:black;
@@ -72,10 +79,11 @@ export const Information = styled.div`
     }
 
     span{
+
         font-weight:bold;
-        font-size:12px;
-        color:black;
-        margin: 0;
+        font-size:16px;
+        color:#9bbec4;
+        
         padding:0;
     }
 `
