@@ -61,14 +61,18 @@ export const Information = styled.div`
     display:flex;
     justify-content: space-between; /* Centraliza horizontalmente */
     align-items: center; 
+    
 
     p{
         font-size:16px;
         margin:0;
+        color:black;
     }
 
     span{
         font-weight:bold;
+        color:black;
+        margin: 0;
     }
 `
 
