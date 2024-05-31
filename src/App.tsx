@@ -5,6 +5,7 @@ import Cart from './components/Cart';
 import { ContainerItems } from './styles';
 import PasteldeNata from "./assets/pastel_nata_80_ref155070 copy 27.png"
 import Sumo from "./assets/Frame 1.png"
+import Iorgut from "./assets/novo-logo_imagens-iogurtes-líquidos_aromas-morango.png"
 
 interface Item {
   id: number;
@@ -19,16 +20,16 @@ const App: React.FC = () => {
     { id: 1, name: 'Pastel de Nata', price: 1.00, img: PasteldeNata },
     { id: 2, name: 'Sumo', price: 1.50, img: Sumo },
     { id: 3, name: 'Pastel de Nata 2', price: 2.00, img: PasteldeNata },
-    { id: 1, name: 'Pastel de Nata', price: 1.00, img: PasteldeNata },
+    { id: 1, name: 'Pastel de Nata', price: 1.00, img: Iorgut },
+    { id: 2, name: 'Sumo', price: 1.50, img: Sumo },
+    { id: 3, name: 'Iorgurt', price: 2.00, img: PasteldeNata },
+    { id: 1, name: 'Pastel de Nata', price: 1.00, img: Iorgut },
     { id: 2, name: 'Sumo', price: 1.50, img: Sumo },
     { id: 3, name: 'Pastel de Nata 2', price: 2.00, img: PasteldeNata },
-    { id: 1, name: 'Pastel de Nata', price: 1.00, img: PasteldeNata },
+    { id: 1, name: 'Pastel de Nata', price: 1.00, img: Iorgut },
     { id: 2, name: 'Sumo', price: 1.50, img: Sumo },
     { id: 3, name: 'Pastel de Nata 2', price: 2.00, img: PasteldeNata },
-    { id: 1, name: 'Pastel de Nata', price: 1.00, img: PasteldeNata },
-    { id: 2, name: 'Sumo', price: 1.50, img: Sumo },
-    { id: 3, name: 'Pastel de Nata 2', price: 2.00, img: PasteldeNata },
-    { id: 1, name: 'Pastel de Nata', price: 1.00, img: PasteldeNata },
+    { id: 1, name: 'Pastel de Nata', price: 1.00, img: Iorgut },
     { id: 2, name: 'Sumo', price: 1.50, img: Sumo },
     { id: 3, name: 'Pastel de Nata 2', price: 2.00, img: PasteldeNata },
   ];
