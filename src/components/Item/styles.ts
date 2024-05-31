@@ -6,18 +6,15 @@ export const ContainerItem = styled.div`
     display: flex;
 
     justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; 
+
     padding:24px;
 
     //border:1px solid black;
-    border-radius: 20px;
+    border-radius: 24px;
 /* box-shadow */
- box-shadow: rgba(0,0,0,0.2) 0 0 24px;
+ box-shadow: rgba(0,0,0,0.1) 0 0 24px;
 
- @media only screen and (min-width: 768px) and (max-width: 1280px) {
-    box-shadow: rgba(0,0,0,0.1) 0 0 24px;
-  
- }
+
 
 
 
@@ -32,15 +29,17 @@ align-items: center;
 
 
 
-width:100%;   
-max-width:100%;
-    height:200px;
+width:100%;
+height:300px;   
+
+
 
     img{
         
         
-        max-width:100%;
-        max-height:100%;
+        width:200px;
+  
+        object-fit: cover;
 
         
         
@@ -51,30 +50,33 @@ max-width:100%;
 
     @media only screen and (min-width: 768px) and (max-width: 1280px) {
         margin-bottom:0px;
-        height:200px;
+       
       
      }
     
 `
 
 export const Information = styled.div`
-background-color: green;
+
     display:flex;
     justify-content: space-between; /* Centraliza horizontalmente */
     align-items: center; 
     width:100%;
     
 
-    p{
+    h3{
         font-size:16px;
         margin:0;
         color:black;
+        padding:0;
     }
 
     span{
         font-weight:bold;
+        font-size:12px;
         color:black;
         margin: 0;
+        padding:0;
     }
 `
 

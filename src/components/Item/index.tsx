@@ -24,7 +24,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ item, addToCart }) => {
                         <img src={item.img} alt="" />
                     </ContainerImg>
                     <Information>
-                        <p>{item.name}</p>
+                        <h3>{item.name}</h3>
                         <span>R${item.price.toFixed(2)}</span>
 
                     </Information>
