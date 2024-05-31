@@ -32,8 +32,8 @@ align-items: center;
 
 
 
-   
-    max-width:100%;
+width:100%;   
+max-width:100%;
     height:200px;
 
     img{
@@ -62,6 +62,7 @@ background-color: green;
     display:flex;
     justify-content: space-between; /* Centraliza horizontalmente */
     align-items: center; 
+    width:100%;
     
 
     p{
