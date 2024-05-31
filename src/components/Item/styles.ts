@@ -58,6 +58,7 @@ align-items: center;
 `
 
 export const Information = styled.div`
+background-color: green;
     display:flex;
     justify-content: space-between; /* Centraliza horizontalmente */
     align-items: center; 
