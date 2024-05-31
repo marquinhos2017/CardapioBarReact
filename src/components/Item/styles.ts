@@ -38,7 +38,7 @@ height:200px;
     img{
         
         
-        width:150px;
+        width:140px;
       
         height: 200px;
         object-fit: contain;
@@ -71,7 +71,7 @@ margin-top: 16px;
 
     h3{
         text-align:left;
-        width:100px;
+        width:60px;
         font-size:16px;
         margin:0;
         color:black;

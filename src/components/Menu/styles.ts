@@ -55,7 +55,7 @@ export const ContainerItems = styled.div`
 
     @media only screen and (min-width: 768px) and (max-width: 1280px) {
         grid-row-gap: 24px;
-        grid-column-gap: 16px;
+        grid-column-gap: 4px;
       
      }
     
