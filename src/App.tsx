@@ -33,26 +33,23 @@ const App: React.FC = () => {
     { id: 3, name: 'Pastel de Nata 2', price: 2.00, img: PasteldeNata },
   ];
 
-  const addToCart = (item: Item) => {
-    console.log("Total no carrinho antes de clicar: " + cart.reduce((sum, item) => sum + item.price, 0));
-    console.log("Valor Item clicado: " + item.price);
-    setCart(prevCart => {
+  const addToCart = (newItem: Item) => {
+    const currentTotal = cart.reduce((sum, item) => sum + item.price, 0);
+    const newTotal = currentTotal + newItem.price;
 
-      const simulacao = cart.reduce((sum, item) => sum + item.price, 0) + item.price;
+    console.log("Total no carrinho antes de clicar: " + currentTotal);
+    console.log("Valor Item clicado: " + newItem.price);
 
-      if (simulacao > 2.40) {
-        alert('Total excede R$2,40!');
-
-
-      } else {
+    if (newTotal > 2.40) {
+      alert('Total excede R$2,40!');
+    } else {
+      setCart(prevCart => {
+        const updatedCart = [...prevCart, newItem];
         console.log("Item adicionado");
-
-        const updatedCart = [...prevCart, item];
-        console.log("Total no carrinho agora: " + updatedCart.reduce((sum, item) => sum + item.price, 0)); return updatedCart;
-
-      } return cart
-
-    });
+        console.log("Total no carrinho agora: " + updatedCart.reduce((sum, item) => sum + item.price, 0));
+        return updatedCart;
+      });
+    }
   };
 
   return (
@@ -60,6 +57,7 @@ const App: React.FC = () => {
 
       <Menu items={items} addToCart={addToCart} />
       <Cart cart={cart} />
+
     </ContainerItems>
   );
 }

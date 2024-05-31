@@ -13,7 +13,13 @@ export const ContainerItem = styled.div`
     border-radius: 20px;
 /* box-shadow */
  box-shadow: rgba(0,0,0,0.2) 0 0 24px;
-    
+
+ @media only screen and (min-width: 600px) and (max-width: 1280px) {
+    box-shadow: rgba(0,0,0,0.1) 0 0 24px;
+  
+ }
+
+
 
 
 `
@@ -35,10 +41,20 @@ align-items: center;
         
         max-width:100%;
         max-height:100%;
+
+        
         
     }
 
     margin-bottom:32px;
+
+
+    @media only screen and (min-width: 600px) and (max-width: 1280px) {
+        margin-bottom:0px;
+        height:200px;
+      
+     }
+    
 `
 
 export const Information = styled.div`
@@ -56,3 +72,8 @@ export const Information = styled.div`
     }
 `
 
+
+export const ButtonContainer = styled.button`
+background-color: white;
+border:none;
+`

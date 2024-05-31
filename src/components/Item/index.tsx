@@ -1,6 +1,6 @@
 import PasteldeNata from "../../assets/pastel_nata_80_ref155070 copy 27.png"
 import Sumo from "../../assets/Frame 1.png"
-import { ContainerImg, ContainerItem, Information } from "./styles"
+import { ButtonContainer, ContainerImg, ContainerItem, Information } from "./styles"
 
 import React from 'react';
 
@@ -16,19 +16,21 @@ interface MenuItemProps {
 
 const MenuItem: React.FC<MenuItemProps> = ({ item, addToCart }) => {
     return (
-        <ContainerItem>
-            <div>
-                <ContainerImg>
+        <ButtonContainer onClick={() => addToCart(item)}>
+            <ContainerItem>
+                <div>
+                    <ContainerImg>
 
-                    <img src={item.img} alt="" />
-                </ContainerImg>
-                <Information>
-                    <p>{item.name}</p>
-                    <span>R${item.price.toFixed(2)}</span>
-                    <button onClick={() => addToCart(item)}>Adicionar ao carrinho</button>
-                </Information>
-            </div>
-        </ContainerItem>
+                        <img src={item.img} alt="" />
+                    </ContainerImg>
+                    <Information>
+                        <p>{item.name}</p>
+                        <span>R${item.price.toFixed(2)}</span>
+
+                    </Information>
+                </div>
+            </ContainerItem>
+        </ButtonContainer>
     );
 };
 

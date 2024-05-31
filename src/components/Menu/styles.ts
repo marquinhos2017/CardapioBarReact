@@ -23,9 +23,13 @@ align-items: center;
     }
 
     margin-bottom:32px;
+
+
+   
 `
 
 export const Information = styled.div`
+
     display:flex;
     justify-content: space-between; /* Centraliza horizontalmente */
     align-items: center; 
@@ -44,8 +48,15 @@ export const Information = styled.div`
 export const ContainerItems = styled.div`
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding:124px;
+    padding:0px;
     grid-column-gap: 42px;
     grid-row-gap: 42px;
+    margin-right:24px;
+
+    @media only screen and (min-width: 600px) and (max-width: 1280px) {
+        grid-row-gap: 24px;
+        grid-column-gap: 16px;
+      
+     }
     
 `
