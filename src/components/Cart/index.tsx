@@ -3,14 +3,15 @@ import { CartContainer } from './styles';
 
 interface CartProps {
     cart: { id: number; name: string; price: number }[];
+    isFixed: boolean;
 }
 
-const Cart: React.FC<CartProps> = ({ cart }) => {
+const Cart: React.FC<CartProps> = ({ cart, isFixed }) => {
     const total = cart.reduce((sum, item) => sum + item.price, 0);
 
 
     return (
-        <CartContainer className="cart">
+        <CartContainer isFixed={isFixed}>
             <h2>Carrinho</h2>
             {cart.map((item, index) => (
                 <div key={index}>

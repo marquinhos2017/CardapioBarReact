@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Menu from './components/Menu';
 import Cart from './components/Cart';
@@ -17,7 +17,24 @@ interface Item {
   img: string
 }
 
+
+
 const App: React.FC = () => {
+  const [isFixed, setIsFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      const fixedPosition = 182; // Altura em que o cart se torna fixo
+      setIsFixed(offset >= fixedPosition);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const [cart, setCart] = useState<Item[]>([]);
   const items: Item[] = [
     { id: 1, name: 'Pastel de Nata', price: 1.00, img: PasteldeNata },
@@ -30,6 +47,16 @@ const App: React.FC = () => {
     { id: 8, name: 'Ovo Cozido', price: 2.00, img: ovocozido },
     { id: 9, name: 'Iogurt', price: 1.00, img: Iorgut },
     { id: 10, name: 'Agua 1.5L', price: 1, img: agua1lmeio },
+    { id: 11, name: 'Pastel de Nata', price: 1.00, img: PasteldeNata },
+    { id: 12, name: 'Sumo', price: 1.50, img: Sumo },
+    { id: 13, name: 'Ovo Cozido', price: 2.00, img: ovocozido },
+    { id: 14, name: 'Iogurt', price: 1.00, img: Iorgut },
+    { id: 15, name: 'Agua 1.5L', price: 1, img: agua1lmeio },
+    { id: 16, name: 'Pastel de Nata', price: 1.00, img: PasteldeNata },
+    { id: 17, name: 'Sumo', price: 1.50, img: Sumo },
+    { id: 18, name: 'Ovo Cozido', price: 2.00, img: ovocozido },
+    { id: 19, name: 'Iogurt', price: 1.00, img: Iorgut },
+    { id: 20, name: 'Agua 1.5L', price: 1, img: agua1lmeio },
 
   ];
 
@@ -59,12 +86,9 @@ const App: React.FC = () => {
 
         <ContainerItems>
           <Logo src={logo} alt="" />
-
           <Menu items={items} addToCart={addToCart} />
-
-
         </ContainerItems>
-        <Cart cart={cart} />
+        <Cart isFixed={isFixed} cart={cart} />
       </Container>
     </>
   );

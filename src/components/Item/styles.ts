@@ -27,10 +27,8 @@ display:flex;
 justify-content: center; /* Centraliza horizontalmente */
 align-items: center; 
 
-
-
 width:100%;
-height:200px;   
+height:150px;   
 
 
 
@@ -38,9 +36,8 @@ height:200px;
     img{
         
         
-        width:140px;
-      
-        height: 200px;
+        width:120px;
+        height: 150px;
         object-fit: contain;
   
  
@@ -54,9 +51,7 @@ height:200px;
 
     @media only screen and (min-width: 768px) and (max-width: 1280px) {
         margin-bottom:0px;
-       
-      
-     }
+    }
     
 `
 
