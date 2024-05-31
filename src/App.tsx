@@ -39,23 +39,23 @@ const App: React.FC = () => {
   const items: Item[] = [
     { id: 1, name: 'Pastel de Nata', price: 1.00, img: PasteldeNata },
     { id: 2, name: 'Sumo', price: 1.50, img: Sumo },
-    { id: 3, name: 'Ovo Cozido', price: 2.00, img: ovocozido },
-    { id: 4, name: 'Iogurt', price: 1.00, img: Iorgut },
+    { id: 3, name: 'Ovo Cozido', price: 0.80, img: ovocozido },
+    { id: 4, name: 'Iogurt', price: 0.65, img: Iorgut },
     { id: 5, name: 'Agua 1.5L', price: 1, img: agua1lmeio },
     { id: 6, name: 'Pastel de Nata', price: 1.00, img: PasteldeNata },
     { id: 7, name: 'Sumo', price: 1.50, img: Sumo },
-    { id: 8, name: 'Ovo Cozido', price: 2.00, img: ovocozido },
-    { id: 9, name: 'Iogurt', price: 1.00, img: Iorgut },
+    { id: 8, name: 'Ovo Cozido', price: 0.80, img: ovocozido },
+    { id: 9, name: 'Iogurt', price: 0.65, img: Iorgut },
     { id: 10, name: 'Agua 1.5L', price: 1, img: agua1lmeio },
     { id: 11, name: 'Pastel de Nata', price: 1.00, img: PasteldeNata },
     { id: 12, name: 'Sumo', price: 1.50, img: Sumo },
-    { id: 13, name: 'Ovo Cozido', price: 2.00, img: ovocozido },
-    { id: 14, name: 'Iogurt', price: 1.00, img: Iorgut },
+    { id: 13, name: 'Ovo Cozido', price: 0.80, img: ovocozido },
+    { id: 14, name: 'Iogurt', price: 0.65, img: Iorgut },
     { id: 15, name: 'Agua 1.5L', price: 1, img: agua1lmeio },
     { id: 16, name: 'Pastel de Nata', price: 1.00, img: PasteldeNata },
     { id: 17, name: 'Sumo', price: 1.50, img: Sumo },
-    { id: 18, name: 'Ovo Cozido', price: 2.00, img: ovocozido },
-    { id: 19, name: 'Iogurt', price: 1.00, img: Iorgut },
+    { id: 18, name: 'Ovo Cozido', price: 0.80, img: ovocozido },
+    { id: 19, name: 'Iogurt', price: 0.65, img: Iorgut },
     { id: 20, name: 'Agua 1.5L', price: 1, img: agua1lmeio },
 
   ];
@@ -67,7 +67,7 @@ const App: React.FC = () => {
     console.log("Total no carrinho antes de clicar: " + currentTotal);
     console.log("Valor Item clicado: " + newItem.price);
 
-    if (newTotal > 2.40) {
+    if (newTotal > 4.2) {
       alert('Total excede R$2,40!');
     } else {
       setCart(prevCart => {
