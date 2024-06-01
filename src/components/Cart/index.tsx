@@ -8,6 +8,7 @@ interface CartProps {
 
 const Cart: React.FC<CartProps> = ({ cart, isFixed }) => {
     const total = cart.reduce((sum, item) => sum + item.price, 0);
+    const VALORTOTAL = 50;
 
 
     return (
@@ -21,7 +22,7 @@ const Cart: React.FC<CartProps> = ({ cart, isFixed }) => {
                     </CartItem><Separator /></>
                 ))}
                 <Total> Total: €{total.toFixed(2)}</Total>
-                {total > 2.40 && <p style={{ color: 'red' }}>Total excede €2,40!</p>}
+                {total > VALORTOTAL && <p style={{ color: 'red' }}>Total excede €50!</p>}
             </CartContainer></>
     );
 };

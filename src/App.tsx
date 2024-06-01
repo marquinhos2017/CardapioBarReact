@@ -23,6 +23,7 @@ interface Item {
 
 
 const App: React.FC = () => {
+  const VALORTOTAL = 50;
   const [isFixed, setIsFixed] = useState(false);
 
   useEffect(() => {
@@ -71,7 +72,7 @@ const App: React.FC = () => {
     console.log("Total no carrinho antes de clicar: " + currentTotal);
     console.log("Valor Item clicado: " + newItem.price);
 
-    if (newTotal > 2.4) {
+    if (newTotal > VALORTOTAL) {
       alert('Total excede R$2,40!');
     } else {
       setCart(prevCart => {
