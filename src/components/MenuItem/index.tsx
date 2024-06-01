@@ -7,6 +7,7 @@ interface MenuItemProps {
         price: number;
     };
     addToCart: (item: { id: number; name: string; price: number }) => void;
+    removeFromCart: (item: { id: number }) => void;
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({ item, addToCart }) => {

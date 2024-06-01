@@ -25,6 +25,7 @@ interface Item {
 const App: React.FC = () => {
   const VALORTOTAL = 50;
   const [isFixed, setIsFixed] = useState(false);
+  const [itemIdCounter, setItemIdCounter] = useState(1); // Contador para IDs únicos
 
   useEffect(() => {
     const handleScroll = () => {
@@ -76,13 +77,20 @@ const App: React.FC = () => {
       alert('Total excede R$2,40!');
     } else {
       setCart(prevCart => {
-        const updatedCart = [...prevCart, newItem];
+        const updatedCart = [...prevCart, { ...newItem, id: itemIdCounter }];
+        setItemIdCounter(prevId => prevId + 1); // Incrementa o contador de IDs
         console.log("Item adicionado");
         console.log("Total no carrinho agora: " + updatedCart.reduce((sum, item) => sum + item.price, 0));
         return updatedCart;
       });
     }
   };
+
+  const removeFromCart = (id: number) => {
+    setCart(prevCart => prevCart.filter(item => item.id !== id));
+  };
+
+
 
   return (
     <>
@@ -93,7 +101,7 @@ const App: React.FC = () => {
 
           <Menu items={items} addToCart={addToCart} />
         </ContainerItems>
-        <Cart isFixed={isFixed} cart={cart} />
+        <Cart isFixed={isFixed} cart={cart} removeFromCart={removeFromCart} />
       </Container>
     </>
   );

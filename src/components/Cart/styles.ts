@@ -19,6 +19,13 @@ font-weight:bold;
 
 `
 
+export const DeleteButton = styled.button`
+
+color:red;
+
+
+`
+
 
 export const CartContainer = styled.div<CartProps>`
 
@@ -102,6 +109,11 @@ display: flex;
 
   margin:0;
   padding:0;
+  align-items:center;
+
+  span{
+    font-size:12px;
+  }
   
   `
 
@@ -109,4 +121,6 @@ export const Separator = styled.hr`
   border: none;
   border-top: 1px solid #ccc;
   margin: 8px 0; // Espaçamento acima e abaixo da linha
-`;
+`
+
+
