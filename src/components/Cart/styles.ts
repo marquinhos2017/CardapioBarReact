@@ -58,7 +58,7 @@ overflow-y: auto;
 
 
     position: fixed;
-    top: 698px;
+    top: 664px;
 
 
 
