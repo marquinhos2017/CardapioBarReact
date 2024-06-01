@@ -9,6 +9,9 @@ import Iorgut from "./assets/novo-logo_imagens-iogurtes-líquidos_aromas-morango
 import ovocozido from "../src/assets/ovocozido.avif"
 import agua1lmeio from "./assets/50cl-cópia.png"
 import logo from "./assets/unnamed.jpg"
+import agua350 from "./assets/001032682.webp"
+import agua500 from "./assets/penacova-agua-05l.png"
+import tostamista from "./assets/tosta-presunto (1).png"
 
 interface Item {
   id: number;
@@ -25,7 +28,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      const fixedPosition = 182; // Altura em que o cart se torna fixo
+      const fixedPosition = 173; // Altura em que o cart se torna fixo
       setIsFixed(offset >= fixedPosition);
     };
 
@@ -41,10 +44,11 @@ const App: React.FC = () => {
     { id: 2, name: 'Sumo', price: 1.50, img: Sumo },
     { id: 3, name: 'Ovo Cozido', price: 0.80, img: ovocozido },
     { id: 4, name: 'Iogurt', price: 0.65, img: Iorgut },
+    { id: 6, name: 'Agua 0.3L', price: 0.65, img: agua350 },
+    { id: 7, name: 'Agua 0.5L', price: 0.80, img: agua500 },
     { id: 5, name: 'Agua 1.5L', price: 1, img: agua1lmeio },
-    { id: 6, name: 'Pastel de Nata', price: 1.00, img: PasteldeNata },
-    { id: 7, name: 'Sumo', price: 1.50, img: Sumo },
-    { id: 8, name: 'Ovo Cozido', price: 0.80, img: ovocozido },
+
+    { id: 8, name: 'Tosta Mista', price: 2.20, img: tostamista },
     { id: 9, name: 'Iogurt', price: 0.65, img: Iorgut },
     { id: 10, name: 'Agua 1.5L', price: 1, img: agua1lmeio },
     { id: 11, name: 'Pastel de Nata', price: 1.00, img: PasteldeNata },
@@ -81,11 +85,11 @@ const App: React.FC = () => {
 
   return (
     <>
-
+      <Logo src={logo} alt="" />
       <Container>
 
         <ContainerItems>
-          <Logo src={logo} alt="" />
+
           <Menu items={items} addToCart={addToCart} />
         </ContainerItems>
         <Cart isFixed={isFixed} cart={cart} />

@@ -61,5 +61,17 @@ margin: 0 auto;
       
      }
      z-index: 1;
+
+
+     @media only screen and (min-width: 1200px) {
+        
+        margin: 0 auto;
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            padding:0px;
+            grid-column-gap: 42px;
+            grid-row-gap: 42px;
+            margin-right:0px;
+      }
     
 `

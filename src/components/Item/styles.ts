@@ -53,6 +53,29 @@ height:150px;
         margin-bottom:0px;
     }
     
+
+    @media only screen and (min-width: 1200px) {
+         margin:0 auto;
+
+         
+        img{
+           
+        
+        
+            max-width:100%;
+            height: 150px;
+            object-fit: contain;
+      
+     
+    
+            
+            
+        }
+    
+
+            margin-right:0px;
+      }
+    
 `
 
 export const Information = styled.div`

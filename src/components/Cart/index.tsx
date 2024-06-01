@@ -1,5 +1,5 @@
 import React from 'react';
-import { CartContainer } from './styles';
+import { CartContainer, CartItem, Separator, Total } from './styles';
 
 interface CartProps {
     cart: { id: number; name: string; price: number }[];
@@ -11,16 +11,18 @@ const Cart: React.FC<CartProps> = ({ cart, isFixed }) => {
 
 
     return (
-        <CartContainer isFixed={isFixed}>
-            <h2>Carrinho</h2>
-            {cart.map((item, index) => (
-                <div key={index}>
-                    <p>{item.name} - R${item.price.toFixed(2)}</p>
-                </div>
-            ))}
-            <h3>Total: R${total.toFixed(2)}</h3>
-            {total > 2.40 && <p style={{ color: 'red' }}>Total excede R$2,40!</p>}
-        </CartContainer>
+        <>
+            <CartContainer isFixed={isFixed}>
+                <h2>Carrinho</h2>
+                {cart.map((item, index) => (
+                    <><CartItem key={index}>
+                        <span>{item.name}</span>
+                        <span>€{item.price.toFixed(2)}</span>
+                    </CartItem><Separator /></>
+                ))}
+                <Total> Total: €{total.toFixed(2)}</Total>
+                {total > 2.40 && <p style={{ color: 'red' }}>Total excede €2,40!</p>}
+            </CartContainer></>
     );
 };
 
