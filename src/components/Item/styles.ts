@@ -89,7 +89,7 @@ margin-top: 16px;
 
     h3{
         text-align:left;
-        width:60px;
+        width:64px;
         font-size:16px;
         margin:0;
         color:black;
@@ -99,7 +99,7 @@ margin-top: 16px;
     span{
 
         font-weight:bold;
-        font-size:16px;
+        font-size:14px;
         color:#9bbec4;
         
         padding:0;

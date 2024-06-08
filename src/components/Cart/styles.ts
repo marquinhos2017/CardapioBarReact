@@ -22,6 +22,7 @@ font-weight:bold;
 export const DeleteButton = styled.button`
 
 color:red;
+margin-left:8px;
 
 
 `
