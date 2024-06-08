@@ -35,7 +35,7 @@ h2{
 }
 display:block;
 
-width:150px;
+width:220px;
 
 position: absolute;
 top: 168px;
