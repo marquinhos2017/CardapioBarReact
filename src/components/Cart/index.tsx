@@ -1,5 +1,11 @@
 import React from 'react';
 import { CartContainer, CartItem, Separator, Total, DeleteButton } from './styles';
+import { BreakLine, CharacterSet, PrinterTypes, ThermalPrinter } from 'node-thermal-printer';
+
+
+
+
+
 
 interface CartProps {
     cart: { id: number; name: string; price: number }[];
@@ -7,9 +13,13 @@ interface CartProps {
     removeFromCart: (id: number) => void;
 }
 
+
+
 const Cart: React.FC<CartProps> = ({ cart, isFixed, removeFromCart }) => {
     const total = cart.reduce((sum, item) => sum + item.price, 0);
     const VALORTOTAL = 50;
+
+
 
     return (
         <CartContainer isFixed={isFixed}>
@@ -26,7 +36,7 @@ const Cart: React.FC<CartProps> = ({ cart, isFixed, removeFromCart }) => {
                     <Separator />
                 </React.Fragment>
             ))}
-            <Total>Total: €{total.toFixed(2)}</Total>
+            <Total >Total: €{total.toFixed(2)}</Total>
             {total > VALORTOTAL && <p style={{ color: 'red' }}>Total excede €50!</p>}
         </CartContainer>
     );

@@ -36,6 +36,10 @@ import sandedeovo from "../src/assets/sandedeovo.jpeg"
 import sandefrango from "../src/assets/sandefrango.jpeg"
 import sandeatum from "../src/assets/sandeatum.jpeg"
 
+
+
+
+
 interface Item {
   id: number;
   name: string;
@@ -102,6 +106,7 @@ const App: React.FC = () => {
 
 
   ];
+
 
   const addToCart = (newItem: Item) => {
     const currentTotal = cart.reduce((sum, item) => sum + item.price, 0);
